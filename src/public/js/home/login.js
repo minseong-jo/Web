@@ -1,6 +1,6 @@
 const id = document.querySelector("#id");
 const pw = document.querySelector("#pw");
-const loginBT = document.querySelector("button");
+const loginBT = document.querySelector("#button");
 
 loginBT.addEventListener("click", login);
 
@@ -9,8 +9,6 @@ function login () {
     id : id.value,
     pw : pw.value,
   };
-
-  console.log(JSON.stringify(req));
   
   fetch("/login", {
     method: "POST",

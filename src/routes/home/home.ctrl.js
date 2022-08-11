@@ -1,4 +1,5 @@
 const User = require("../../models/User");
+
 const output = {
   index: (req, res) => {
     res.render("home/index");
@@ -6,7 +7,11 @@ const output = {
   
   login: (req, res) => {
     res.render("home/login");
-  }
+  },
+
+  register: (req, res) => {
+    res.render("home/register");
+  },
 };
 
 const process = {

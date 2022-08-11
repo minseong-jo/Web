@@ -7,18 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="/css/home/login.css">
-  <script src="/js/home/login.js" defer></script>
+  <script src="/js/home/register.js" defer></script>
   <title>Document</title>
 </head>
 
 <body>
-  <div class="login-page">
+  <div class="register-page">
     <div class="form">
-      <form class="login-form">
+      <class="register-form">    
+        <input id="name" type="text" placeholder="name" />
         <input id="id" type="text" placeholder="ID" />
         <input id="pw" type="password" placeholder="Password" />
-        <p id="button">로그인</p>
-        <p class="message">계정이 없나요? <a href="/register">계정을 만들어보세요!</a></p>
+        <input id="confirm-pw" type="password" placeholder="Confirm Password" />
+        <p id="button">회원가입</p>
+        <p class="message">이미 계정이 있나요? <a href="/login">로그인 해보세요!</a></p>
       </form>
     </div>
   </div>
