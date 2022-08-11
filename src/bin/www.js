@@ -1,5 +1,5 @@
-const app = require("../app");
-const PORT = 4040;
+const app = require("../../app");
+const PORT = 8080;
 
 app.listen(PORT, () => {
   console.log('This server is running!');
