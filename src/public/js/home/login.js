@@ -1,8 +1,33 @@
 const id = document.querySelector("#id");
 const pw = document.querySelector("#pw");
 const loginBT = document.querySelector("#button");
+const input = document.querySelector("input");
 
 loginBT.addEventListener("click", login);
+
+id.addEventListener("keydown",({ key }) => {
+  keydown(key);
+});
+
+pw.addEventListener("keydown",({ key }) => {
+  keydown(key);
+});
+
+function InputDelete () {
+  const obj = document.getElementsByClassName('text');
+
+  for (var i = 0; i < obj.length; i++) {
+    obj[i].value = '';
+  }
+}
+
+function keydown (key) {
+  if (key == "Enter") {
+    login();
+  } else {
+    return;
+  }
+}
 
 function login () {
   const req = {
@@ -21,8 +46,10 @@ function login () {
   .then((res) => {
     if (res.success) {
       location.href = "/";
+      InputDelete();
     } else {
       alert (res.msg);
+      InputDelete();
     }
   })
   .catch((err) => {
